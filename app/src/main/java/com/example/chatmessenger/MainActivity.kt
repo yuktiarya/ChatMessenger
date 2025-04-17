@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-                    ChatList()
+            ChatList()
         }
     }
 }
@@ -67,12 +67,16 @@ fun Badge(text: String, textColor: Color, backgroundColor: Color) {
         Text(text = text, color = textColor, style = MaterialTheme.typography.bodyLarge)
     }
 }
+@Preview(showBackground = true)
 @Composable
 fun ChatList() {
     val chatItems = listOf(
         ChatData("Alice", "Hey, how are you?", 2, true),
         ChatData("Bob", "See you later!", 0, false),
-        ChatData("Charlie", "Let's catch up!", 5, false)
+        ChatData("Charlie", "Let's catch up!", 5, false),
+        ChatData("Man", "Hey, how are you?", 2, true),
+        ChatData("Boy", "See you later!", 100, false),
+        ChatData("Rj", "Let's catch up!", 78, false)
     )
 
     LazyColumn {
